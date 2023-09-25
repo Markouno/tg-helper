@@ -19,7 +19,7 @@ def send_msg(message):
         bot.send_message(message.chat.id, f'Не нашел ничего по коду {message.text}. Может ошибся цифрой?')
 
     meta_data = f'{run_date} - {message.from_user.first_name} - {message.text}\n'
-
+    print(meta_data)
     with open('main.log', 'a', encoding='UTF-8') as log_file:
                 log_file.writelines(meta_data)
 
